@@ -55,7 +55,7 @@
             border-bottom: 1px solid #ddd;
         }
         .profile-photo {
-            width: 100px; /* Tamanho ajustado */
+            width: 100px; 
             height: 100px;
             border-radius: 50%;
             object-fit: cover;
@@ -106,7 +106,7 @@
             margin-bottom: 8px;
         }
         .checklist-item li::before {
-            content: "\2713"; /* Unicode Checkmark */
+            content: "\2713"; 
             color: #004b80;
             font-weight: bold;
             position: absolute;
@@ -114,7 +114,7 @@
             top: 0;
         }
         
-        /* === ESTILIZAÇÃO GRÁFICO DE ROSCA (Auto Check) === */
+        /* ESTILIZAÇÃO GRÁFICO */
         .gestao-progress-area {
             display: flex;
             gap: 30px;
@@ -191,21 +191,10 @@
             .container { box-shadow: none !important; border-top: 2px solid #000000 !important; padding: 20px 0; }
             h1, h2, h3, .info .nome { color: #000000 !important; }
             .quote { background-color: #f7f7f7 !important; border-left: 5px solid #555 !important; }
-            
-            /* Remove a interatividade e o gráfico para impressão */
             .gestao-progress-area { display: block; }
             .progress-chart-container, .auto-check input[type="checkbox"] { display: none !important; }
-            
-            /* Mantém o texto limpo da auto-avaliação na impressão */
             .auto-check label { border: none; padding: 0; margin: 5px 0; cursor: default; }
-
-            /* Rodapé: Mostrar o link completo */
-            .footer a:after {
-                content: " (" attr(href) ") "; 
-                font-size: 0.8em;
-                color: #555;
-                text-decoration: none;
-            }
+            .footer a:after { content: " (" attr(href) ") "; font-size: 0.8em; color: #555; text-decoration: none; }
         }
     </style>
 </head>
@@ -223,10 +212,12 @@
         </div>
 
         <h1>Plano de Gestão e Liderança Estratégica</h1>
-        <div class="quote">"Liderar é servir com propósito e decidir com clareza. Meu método foca em Diagnóstico, Controle e Crescimento Sustentável."</div>
+        <h3 style="margin-top: -15px; margin-bottom: 25px; color: #555;">Diagnóstico. Controle. Resultados.</h3>
+        
+        <div class="quote">"Minha liderança é pautada na <strong>disciplina de dados</strong> e na <strong>execução de valor</strong>. Implementar a metodologia certa é a garantia de crescimento sustentável."</div>
 
         <h2>Proposta de Valor e Estratégia Inicial</h2>
-        <p>Este documento é a síntese da minha filosofia de trabalho. Ele serve como um guia prático para minha atuação como gestor e líder administrativo, refletindo uma abordagem orientada por **dados**, foco em **resultado** e compromisso com a **eficiência e a excelência operacional**. Esta metodologia é adaptável e aplicável em qualquer organização.</p>
+        <p>Este documento é a síntese da minha filosofia de trabalho. Ele serve como um guia prático para minha atuação como gestor e líder administrativo, refletindo uma abordagem orientada por <strong>dados</strong>, foco em <strong>resultado</strong> e compromisso com a <strong>eficiência e a excelência operacional</strong>. Esta metodologia é adaptável e aplicável em qualquer organização.</p>
         
         <h2>Metodologia de Implantação e Controles (0-90 Dias)</h2>
         
@@ -234,55 +225,55 @@
         <ul class="checklist-item">
             <li>Levantar organograma e estrutura atual</li>
             <li>Mapear todos os processos principais (Financeiro, Compras, RH, Operações)</li>
-            <li>Padronizar e criar *dashboards* de KPIs para decisão.</li>
+            <li>Padronizar e criar <em>dashboards</em> de <strong>KPIs para decisão</strong>.</li>
             <li>Detectar gargalos, retrabalhos e desperdícios</li>
             <li>Realizar escuta ativa e entrevistas com equipe-chave (imersão cultural)</li>
         </ul>
 
         <h3>2. Saúde Financeira e Controle</h3>
         <ul class="checklist-item">
-            <li>Conferir DRE, fluxo de caixa e capital de giro</li>
-            <li>Elaborar ou avaliar orçamentos e projeções (Budgeting e Forecasting)</li>
+            <li>Conferir DRE, fluxo de caixa e <strong>capital de giro</strong></li>
+            <li>Elaborar ou avaliar orçamentos e <strong>projeções</strong> (Budgeting e Forecasting)</li>
             <li>Revisar precificação, margem de lucro e ponto de equilíbrio</li>
-            <li>Analisar custos fixos e variáveis com foco em redução inteligente</li>
+            <li>Analisar custos fixos e variáveis com foco em <strong>redução inteligente</strong></li>
             <li>Rever contratos e obrigações financeiras de alto impacto</li>
         </ul>
 
         <h3>3. Liderança, Gente e Cultura</h3>
         <ul class="checklist-item">
             <li>Analisar folha de pagamento e política de benefícios</li>
-            <li>Avaliar clima organizacional e métricas de rotatividade (turnover)</li>
+            <li>Avaliar clima organizacional e métricas de rotatividade (<strong>turnover</strong>)</li>
             <li>Mapear e definir cargos, salários e estruturar plano de carreira</li>
             <li>Observar e reforçar a cultura, valores e rituais de liderança</li>
         </ul>
 
         <h3>4. Otimização de Processos e Sistemas</h3>
         <ul class="checklist-item">
-            <li>Verificar existência de manuais e procedimentos operacionais padrão (POP)</li>
-            <li>Avaliar o fluxo de aprovação e a governança interna</li>
-            <li>Examinar uso de sistemas (ERP, BI, etc.) e buscar automação</li>
+            <li>Verificar existência de manuais e procedimentos operacionais padrão (<strong>POP</strong>)</li>
+            <li>Avaliar o fluxo de aprovação e a <strong>governança interna</strong></li>
+            <li>Examinar uso de sistemas (ERP, <strong>BI</strong>, etc.) e buscar <strong>automação</strong></li>
             <li>Validar segurança da informação, backups e acessos críticos</li>
         </ul>
 
         <h3>5. Planejamento, Metas e Acompanhamento</h3>
         <ul class="checklist-item">
             <li>Levantar metas e resultados atuais e históricos</li>
-            <li>Criar/alinhar metas SMART e KPIs de performance por área</li>
+            <li>Criar/alinhar metas <strong>SMART</strong> e KPIs de performance por área</li>
             <li>Criar e/ou otimizar Dashboards de acompanhamento (Business Intelligence - BI)</li>
-            <li>Implementar ciclos de melhoria contínua (PDCA, 5W2H)</li>
+            <li>Implementar ciclos de melhoria contínua (<strong>PDCA</strong>, 5W2H)</li>
         </ul>
         
         <h3>6. Fornecedores e Estoque</h3>
         <ul class="checklist-item">
             <li>Avaliar contratos e condições com fornecedores</li>
-            <li>Realizar curva ABC de estoque e otimização de armazenagem</li>
-            <li>Validar perdas, sobras e acuracidade de inventários</li>
+            <li>Realizar <strong>curva ABC</strong> de estoque e otimização de armazenagem</li>
+            <li>Validar perdas, sobras e <strong>acuracidade</strong> de inventários</li>
         </ul>
         
         <h3>7. Comunicação e Relacionamento</h3>
         <ul class="checklist-item">
             <li>Avaliar canais e fluxos de comunicação interna e externa</li>
-            <li>Estruturar rotinas de reuniões de alinhamento e feedbacks formais</li>
+            <li>Estruturar rotinas de reuniões de alinhamento e <strong>feedbacks formais</strong></li>
             <li>Conhecer perfil dos clientes e mapear necessidades de mercado</li>
         </ul>
         
@@ -330,27 +321,25 @@
     </div>
 
     <script>
-        // Array de frases de feedback correlacionadas ao índice (0-9) da lista
         const PROGRESS_PHRASES = [
-            'Foco em Estrutura Operacional',     // Index 0 (1º item)
-            'Visão de Dados e Métricas',        // Index 1 (2º item)
-            'Liderança em Alinhamento',         // Index 2 (3º item)
-            'Tomada de Decisão Analítica',      // Index 3 (4º item)
-            'Consolidação de Rituais',          // Index 4 (5º item)
-            'Gestão de Crises e Motivação',     // Index 5 (6º item)
-            'Domínio Financeiro (Projeção)',    // Index 6 (7º item)
-            'Processos Otimizados',             // Index 7 (8º item)
-            'Execução Estratégica Completa',    // Index 8 (9º item)
-            'LÍDER COMPLETO. Pronto para Ação!' // Index 9 (10º item)
+            'Foco em Estrutura Operacional',     
+            'Visão de Dados e Métricas',        
+            'Liderança em Alinhamento',         
+            'Tomada de Decisão Analítica',      
+            'Consolidação de Rituais',          
+            'Gestão de Crises e Motivação',     
+            'Domínio Financeiro (Projeção)',    
+            'Processos Otimizados',             
+            'Execução Estratégica Completa',    
+            'LÍDER COMPLETO. Pronto para Ação!' 
         ];
 
         function updateProgress() {
             const checkboxes = document.querySelectorAll('#auto-check-list input[type="checkbox"]');
             const totalItems = checkboxes.length;
             let checkedItems = 0;
-            let lastCheckedIndex = -1; // Usado para a progressão lógica
+            let lastCheckedIndex = -1; 
 
-            // 1. Percorre a lista para calcular a porcentagem e encontrar o índice mais avançado
             checkboxes.forEach((cb, index) => {
                 if (cb.checked) {
                     checkedItems++;
@@ -360,19 +349,16 @@
 
             const percentage = Math.round((checkedItems / totalItems) * 100);
             
-            // 2. Atualiza a porcentagem e o gráfico
             document.getElementById('progress-percentage').innerText = percentage + '%';
             
             const circumference = 100;
             const strokeDashoffset = (percentage / 100) * circumference;
             document.getElementById('progress-circle').style.strokeDasharray = `${strokeDashoffset}, ${circumference}`;
 
-            // 3. Lógica para as Frases de Feedback (PROGRESSÃO LÓGICA)
             const feedbackElement = document.getElementById('feedback-phrase');
             let phrase = 'Inicie o Diagnóstico';
 
             if (lastCheckedIndex !== -1) {
-                // Se algum item foi marcado, usa a frase do item mais avançado
                 phrase = PROGRESS_PHRASES[lastCheckedIndex]; 
             }
             
