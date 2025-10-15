@@ -1,154 +1,156 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Manual do Gestor e Líder Estratégico</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      background-color: #ffffff;
-      color: #333;
-      padding: 40px;
-    }
-    h1, h2, h3 {
-      color: #27628d;
-    }
-    .header {
-      text-align: left;
-      border-bottom: 2px solid #27628d;
-      padding-bottom: 10px;
-      margin-bottom: 30px;
-    }
-    .info {
-      font-size: 14px;
-      line-height: 1.6;
-    }
-    .info .nome {
-      font-weight: bold;
-      font-size: 16px;
-      color: #27628d;
-    }
-    .quote {
-      font-style: italic;
-      color: #555;
-      margin: 20px 0;
-      border-left: 4px solid #27628d;
-      padding-left: 10px;
-    }
-    .auto-check label {
-      display: block;
-      margin: 8px 0;
-    }
-    .auto-check input {
-      margin-right: 10px;
-    }
-    .footer {
-      margin-top: 40px;
-      font-size: 13px;
-      color: #888;
-    }
-  </style>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Silvanio Gois - Perfil Executivo e Estratégia de Gestão</title>
+    <style>
+        /* ... Seu CSS de estilo (incluindo o @media print) ... */
+        body {
+            font-family: 'Open Sans', Arial, sans-serif;
+            background-color: #f4f7f9;
+            color: #222;
+            line-height: 1.6;
+            padding: 20px;
+        }
+        .container {
+            max-width: 850px;
+            margin: 0 auto;
+            background-color: #ffffff;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+            padding: 40px 30px;
+            border-top: 5px solid #004b80;
+        }
+        h1, h2, h3 {
+            color: #004b80;
+            font-weight: 600;
+            margin-top: 30px;
+            padding-bottom: 5px;
+        }
+        h1 {
+            font-size: 2.2em;
+            border-bottom: 2px solid #e0e0e0;
+            padding-bottom: 10px;
+        }
+        /* ... CSS para .header, .profile-photo, .info, .quote, .checklist-item ... */
+        /* ... CSS para .gestao-progress-area e o gráfico SVG ... */
+        /* ... CSS para .footer ... */
+        /* ... CSS para @media print ... */
+        
+        /* AJUSTES IMPORTANTES DE REPETIÇÃO: */
+        .info .destaque { font-weight: 600; color: #333; margin-bottom: 8px; }
+        .checklist-item { list-style: none; padding-left: 0; }
+        .checklist-item li { position: relative; padding-left: 20px; margin-bottom: 8px; }
+        .checklist-item li::before { content: "\2713"; color: #004b80; font-weight: bold; position: absolute; left: 0; top: 0; }
+        
+        .gestao-progress-area { display: flex; gap: 30px; align-items: flex-start; }
+        .progress-chart-container { position: relative; width: 150px; height: 150px; margin-top: 15px; flex-shrink: 0; }
+        .auto-check { flex-grow: 1; }
+        .circular-chart { display: block; margin: 10px auto; }
+        .circle-bg { fill: none; stroke: #eee; stroke-width: 3.8; }
+        .circle { fill: none; stroke: #004b80; stroke-width: 2.8; stroke-linecap: round; transition: stroke-dasharray 0.5s ease-in-out; transform: rotate(-90deg); transform-origin: 50% 50%; }
+        .chart-text-center { position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); text-align: center; }
+        #progress-percentage { display: block; font-size: 1.6em; font-weight: 700; color: #004b80; }
+        #feedback-phrase { display: block; font-size: 0.8em; color: #555; font-weight: 600; line-height: 1.2; }
+    </style>
 </head>
 <body>
-  <div class="header">
-    <div class="info">
-      <div class="nome">Silvanio Gois</div>
-      Técnico em Administração e Edificações<br />
-      Graduando em Processos Gerenciais<br />
-      Email: sg@silvaniogois.com.br
+    <div class="container">
+        <div class="header">
+            <img src="SG_Executivo-removebg-preview.png" alt="Foto Executiva de Silvanio Gois" class="profile-photo" />
+            <div class="info">
+                <div class="nome">Silvanio Gois</div>
+                <span class="destaque">Gestor Estratégico e Líder Administrativo</span> 
+                <span>Técnico em Administração e Edificações</span>
+                <span>Graduando em Processos Gerenciais</span>
+                <span>Email: sg@silvaniogois.com.br</span>
+            </div>
+        </div>
+
+        <h1>Plano de Gestão e Liderança Estratégica</h1>
+        <div class="quote">"Liderar é servir com propósito e decidir com clareza. Meu método foca em Diagnóstico, Controle e Crescimento Sustentável."</div>
+
+        <h2>Proposta de Valor e Estratégia Inicial</h2>
+        <p>Este documento é a síntese da minha filosofia de trabalho. Ele serve como um guia prático para minha atuação como gestor e líder administrativo, refletindo uma abordagem orientada por **dados**, foco em **resultado** e compromisso com a **eficiência e a excelência operacional**. Esta metodologia é adaptável e aplicável em qualquer organização.</p>
+        
+        <h2>Metodologia de Implantação e Controles (0-90 Dias)</h2>
+        
+        <h3>1. Diagnóstico e Governança (O "Onde Estamos")</h3>
+        <ul class="checklist-item">
+            <li>Levantar organograma e estrutura atual</li>
+            <li>Mapear todos os processos principais (Financeiro, Compras, RH, Operações)</li>
+            <li>**Padronizar e criar *dashboards* de KPIs para decisão.** (Melhoria de linguagem)</li>
+            <li>Detectar gargalos, retrabalhos e desperdícios</li>
+            <li>Realizar escuta ativa e entrevistas com equipe-chave (imersão cultural)</li>
+        </ul>
+
+        <h2>Pilar da Liderança: Autoavaliação e Visão Estratégica</h2>
+        <p>Questões-chave que orientam minha tomada de decisão e a gestão diária da performance. Use para medir sua prontidão em cada pilar da gestão:</p>
+
+        <div class="gestao-progress-area">
+            <div class="progress-chart-container">
+                <svg viewBox="0 0 36 36" class="circular-chart">
+                    <path class="circle-bg" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" />
+                    <path class="circle" id="progress-circle"
+                          stroke-dasharray="0, 100" 
+                          d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" />
+                </svg>
+                <div class="chart-text-center">
+                    <span id="progress-percentage">0%</span>
+                    <span id="feedback-phrase" class="feedback-term">Inicie o Diagnóstico</span>
+                </div>
+            </div>
+
+            <div class="auto-check" id="auto-check-list">
+                <label><span><input type="checkbox" onchange="updateProgress()"> Eu domino a estrutura operacional da minha equipe?</span></label>
+                <label><span><input type="checkbox" onchange="updateProgress()"> Tenho clareza total sobre os números da empresa?</span></label>
+                </div>
+        </div>
+
+        <div class="footer">
+            &copy; 2025 Silvanio Gois — Todos os direitos reservados | <a href="https://www.silvaniogois.com.br" target="_blank">Retornar ao site</a>
+        </div>
     </div>
-  </div>
 
-  <h1>Manual do Gestor e Líder Estratégico</h1>
-  <div class="quote">"Liderar é servir com propósito e decidir com clareza."</div>
+    <script>
+        function updateProgress() {
+            const checkboxes = document.querySelectorAll('#auto-check-list input[type="checkbox"]');
+            const totalItems = checkboxes.length;
+            let checkedItems = 0;
+            
+            checkboxes.forEach(cb => {
+                if (cb.checked) {
+                    checkedItems++;
+                }
+            });
 
-  <h2> Objetivo do Manual</h2>
-  <p>Elaborei este manual como um guia prático para minha atuação como gestor e líder administrativo. Ele reflete minha forma de conduzir com objetividade, foco em resultado e compromisso com a eficiência, o controle e a liderança — aplicável a qualquer organização, seja ela pequena, média ou grande.</p>
+            const percentage = Math.round((checkedItems / totalItems) * 100);
+            
+            document.getElementById('progress-percentage').innerText = percentage + '%';
+            
+            const circumference = 100;
+            const strokeDashoffset = (percentage / 100) * circumference;
+            document.getElementById('progress-circle').style.strokeDasharray = `${strokeDashoffset}, ${circumference}`;
 
-  <h2> Checklist Profissional do Gestor</h2>
+            const feedbackElement = document.getElementById('feedback-phrase');
+            let phrase = '';
 
-  <h3>1. Diagnóstico Inicial</h3>
-  <p>
-    1.1 Levantar organograma e estrutura atual<br />
-    1.2 Mapear todos os processos principais: financeiro, compras, RH, operações<br />
-    1.3 Identificar indicadores (KPIs) existentes<br />
-    1.4 Detectar gargalos, retrabalhos, desperdícios<br />
-    1.5 Realizar escuta ativa com equipe-chave
-  </p>
+            if (percentage === 0) {
+                phrase = 'Inicie o Diagnóstico';
+            } else if (percentage <= 30) {
+                phrase = 'Foco em Estrutura Inicial';
+            } else if (percentage <= 60) {
+                phrase = 'Em Consolidação de Controle';
+            } else if (percentage <= 90) {
+                 phrase = 'Liderança em Plena Execução';
+            } else {
+                phrase = 'BOM GESTOR. Pronto para Ação!';
+            }
+            
+            feedbackElement.innerText = phrase;
+        }
 
-  <h3>2. Financeiro</h3>
-  <p>
-    2.1 Conferir DRE, fluxo de caixa, contas a pagar e receber<br />
-    2.2 Avaliar orçamentos (existentes ou elaborar)<br />
-    2.3 Revisar precificação e margem de lucro<br />
-    2.4 Analisar custos fixos e variáveis<br />
-    2.5 Rever contratos e obrigações financeiras
-  </p>
-
-  <h3>3. Gente e Cultura</h3>
-  <p>
-    3.1 Analisar folha de pagamento e benefícios<br />
-    3.2 Avaliar clima organizacional e rotatividade<br />
-    3.3 Mapear cargos, salários, plano de carreira<br />
-    3.4 Observar cultura, liderança e valores práticos
-  </p>
-
-  <h3>4. Processos e Controles Internos</h3>
-  <p>
-    4.1 Verificar existência de manuais/procedimentos<br />
-    4.2 Avaliar fluxo de aprovação e governança<br />
-    4.3 Examinar uso de sistemas (ERP, planilhas, etc.)<br />
-    4.4 Validar segurança da informação e acessos
-  </p>
-
-  <h3>5. Planejamento e Indicadores</h3>
-  <p>
-    5.1 Levantar metas e resultados atuais<br />
-    5.2 Criar/alinhar metas SMART e KPIs<br />
-    5.3 Criar dashboards de acompanhamento (BI)<br />
-    5.4 Propor ciclos de melhoria (PDCA, 5W2H)
-  </p>
-
-  <h3>6. Fornecedores e Estoque</h3>
-  <p>
-    6.1 Avaliar contratos e condições com fornecedores<br />
-    6.2 Realizar curva ABC de estoque<br />
-    6.3 Validar perdas, sobras e inventários
-  </p>
-
-  <h3>7. Comunicação e Relacionamento</h3>
-  <p>
-    7.1 Avaliar canais e fluxos de comunicação interna<br />
-    7.2 Estruturar rotinas de reuniões e feedbacks<br />
-    7.3 Conhecer perfil dos clientes e necessidades
-  </p>
-
-  <h3>8. Legal, Fiscal e Regulatório</h3>
-  <p>
-    8.1 Verificar regularidade fiscal e documental<br />
-    8.2 Validar situação contábil e certidões<br />
-    8.3 Avaliar riscos jurídicos e obrigações legais
-  </p>
-
-  <h2> Auto Check de Liderança e Gestão</h2>
-  <div class="auto-check">
-    <label><input type="checkbox"> Eu domino a estrutura operacional da minha equipe?</label>
-    <label><input type="checkbox"> Tenho clareza total sobre os números da empresa?</label>
-    <label><input type="checkbox"> Minha equipe sabe exatamente o que espero deles?</label>
-    <label><input type="checkbox"> Tomo decisões com base em dados e não apenas opinião?</label>
-    <label><input type="checkbox"> Tenho rituais de liderança claros (reuniões, feedbacks, alinhamentos)?</label>
-    <label><input type="checkbox"> Consigo manter a equipe motivada mesmo em tempos difíceis?</label>
-    <label><input type="checkbox"> Tenho controle e previsão financeira confiável?</label>
-    <label><input type="checkbox"> Meus processos têm métricas claras e acompanhamento?</label>
-    <label><input type="checkbox"> Faço a ponte entre a estratégia e a execução de forma eficiente?</label>
-    <label><input type="checkbox"> Eu lidero com empatia e atitude?</label>
-  </div>
-
-  <div class="footer">
-    Manual desenvolvido por Silvanio Gois para uso estratégico e apresentação profissional.
-  </div>
+        document.addEventListener('DOMContentLoaded', updateProgress);
+    </script>
 </body>
 </html>
-
-
