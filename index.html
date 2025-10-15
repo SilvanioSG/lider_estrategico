@@ -45,7 +45,7 @@
             color: #333;
         }
 
-        /* HEADER EXECUTIVO (FOTO E DADOS) - CORRIGIDO */
+        /* HEADER EXECUTIVO (FOTO E DADOS) */
         .header {
             display: flex;
             align-items: center;
@@ -55,7 +55,7 @@
             border-bottom: 1px solid #ddd;
         }
         .profile-photo {
-            width: 100px; /* Tamanho ajustado para não dominar */
+            width: 100px; /* Tamanho ajustado */
             height: 100px;
             border-radius: 50%;
             object-fit: cover;
@@ -115,7 +115,6 @@
         }
         
         /* === ESTILIZAÇÃO GRÁFICO DE ROSCA (Auto Check) === */
-        /* CORREÇÃO 2: Layout e visibilidade dos checkboxes */
         .gestao-progress-area {
             display: flex;
             gap: 30px;
@@ -130,7 +129,7 @@
         }
         .auto-check {
             flex-grow: 1;
-            min-width: 60%; /* Garante que haja espaço suficiente para os labels */
+            min-width: 60%;
         }
         .circular-chart {
             display: block;
@@ -144,7 +143,7 @@
         
         /* Estilo da lista de checkbox */
         .auto-check label {
-            display: block; /* Garante que cada item esteja em sua própria linha */
+            display: block;
             margin: 10px 0;
             padding: 10px;
             border: 1px solid #eee;
@@ -159,7 +158,7 @@
             margin-right: 10px;
         }
         
-        /* FOOTER CORRIGIDO */
+        /* FOOTER */
         .footer {
             margin-top: 50px;
             padding-top: 20px;
@@ -193,7 +192,7 @@
             h1, h2, h3, .info .nome { color: #000000 !important; }
             .quote { background-color: #f7f7f7 !important; border-left: 5px solid #555 !important; }
             
-            /* Remove a interatividade e o gráfico */
+            /* Remove a interatividade e o gráfico para impressão */
             .gestao-progress-area { display: block; }
             .progress-chart-container, .auto-check input[type="checkbox"] { display: none !important; }
             
@@ -312,16 +311,16 @@
             </div>
 
             <div class="auto-check" id="auto-check-list">
-                <label><input type="checkbox" onchange="updateProgress()"> Eu domino a estrutura operacional da minha equipe?</label>
-                <label><input type="checkbox" onchange="updateProgress()"> Tenho clareza total sobre os números da empresa?</label>
-                <label><input type="checkbox" onchange="updateProgress()"> Minha equipe sabe exatamente o que espero deles?</label>
-                <label><input type="checkbox" onchange="updateProgress()"> Tomo decisões com base em dados e não apenas opinião?</label>
-                <label><input type="checkbox" onchange="updateProgress()"> Tenho rituais de liderança claros (reuniões, feedbacks, alinhamentos)?</label>
-                <label><input type="checkbox" onchange="updateProgress()"> Consigo manter a equipe motivada mesmo em tempos difíceis?</label>
-                <label><input type="checkbox" onchange="updateProgress()"> Tenho controle e previsão financeira confiável?</label>
-                <label><input type="checkbox" onchange="updateProgress()"> Meus processos têm métricas claras e acompanhamento?</label>
-                <label><input type="checkbox" onchange="updateProgress()"> Faço a ponte entre a estratégia e a execução de forma eficiente?</label>
-                <label><input type="checkbox" onchange="updateProgress()"> Eu lidero com empatia e atitude?</label>
+                <label><input type="checkbox" onchange="updateProgress()"> Eu domino a estrutura operacional da minha equipe?</label> 
+                <label><input type="checkbox" onchange="updateProgress()"> Tenho clareza total sobre os números da empresa?</label> 
+                <label><input type="checkbox" onchange="updateProgress()"> Minha equipe sabe exatamente o que espero deles?</label> 
+                <label><input type="checkbox" onchange="updateProgress()"> Tomo decisões com base em dados e não apenas opinião?</label> 
+                <label><input type="checkbox" onchange="updateProgress()"> Tenho rituais de liderança claros (reuniões, feedbacks, alinhamentos)?</label> 
+                <label><input type="checkbox" onchange="updateProgress()"> Consigo manter a equipe motivada mesmo em tempos difíceis?</label> 
+                <label><input type="checkbox" onchange="updateProgress()"> Tenho controle e previsão financeira confiável?</label> 
+                <label><input type="checkbox" onchange="updateProgress()"> Meus processos têm métricas claras e acompanhamento?</label> 
+                <label><input type="checkbox" onchange="updateProgress()"> Faço a ponte entre a estratégia e a execução de forma eficiente?</label> 
+                <label><input type="checkbox" onchange="updateProgress()"> Eu lidero com empatia e atitude?</label> 
             </div>
         </div>
 
@@ -331,38 +330,50 @@
     </div>
 
     <script>
+        // Array de frases de feedback correlacionadas ao índice (0-9) da lista
+        const PROGRESS_PHRASES = [
+            'Foco em Estrutura Operacional',     // Index 0 (1º item)
+            'Visão de Dados e Métricas',        // Index 1 (2º item)
+            'Liderança em Alinhamento',         // Index 2 (3º item)
+            'Tomada de Decisão Analítica',      // Index 3 (4º item)
+            'Consolidação de Rituais',          // Index 4 (5º item)
+            'Gestão de Crises e Motivação',     // Index 5 (6º item)
+            'Domínio Financeiro (Projeção)',    // Index 6 (7º item)
+            'Processos Otimizados',             // Index 7 (8º item)
+            'Execução Estratégica Completa',    // Index 8 (9º item)
+            'LÍDER COMPLETO. Pronto para Ação!' // Index 9 (10º item)
+        ];
+
         function updateProgress() {
             const checkboxes = document.querySelectorAll('#auto-check-list input[type="checkbox"]');
             const totalItems = checkboxes.length;
             let checkedItems = 0;
-            
-            checkboxes.forEach(cb => {
+            let lastCheckedIndex = -1; // Usado para a progressão lógica
+
+            // 1. Percorre a lista para calcular a porcentagem e encontrar o índice mais avançado
+            checkboxes.forEach((cb, index) => {
                 if (cb.checked) {
                     checkedItems++;
+                    lastCheckedIndex = index; 
                 }
             });
 
             const percentage = Math.round((checkedItems / totalItems) * 100);
             
+            // 2. Atualiza a porcentagem e o gráfico
             document.getElementById('progress-percentage').innerText = percentage + '%';
             
             const circumference = 100;
             const strokeDashoffset = (percentage / 100) * circumference;
             document.getElementById('progress-circle').style.strokeDasharray = `${strokeDashoffset}, ${circumference}`;
 
+            // 3. Lógica para as Frases de Feedback (PROGRESSÃO LÓGICA)
             const feedbackElement = document.getElementById('feedback-phrase');
-            let phrase = '';
+            let phrase = 'Inicie o Diagnóstico';
 
-            if (percentage === 0) {
-                phrase = 'Inicie o Diagnóstico';
-            } else if (percentage <= 30) {
-                phrase = 'Foco em Estrutura Inicial';
-            } else if (percentage <= 60) {
-                phrase = 'Em Consolidação de Controle';
-            } else if (percentage <= 90) {
-                 phrase = 'Liderança em Plena Execução';
-            } else {
-                phrase = 'BOM GESTOR. Pronto para Ação!';
+            if (lastCheckedIndex !== -1) {
+                // Se algum item foi marcado, usa a frase do item mais avançado
+                phrase = PROGRESS_PHRASES[lastCheckedIndex]; 
             }
             
             feedbackElement.innerText = phrase;
